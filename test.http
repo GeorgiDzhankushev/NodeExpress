@@ -14,8 +14,8 @@ POST http://127.0.0.1:8080/customers HTTP/1.1
 content-type: application/json
 
 {
-    "name": "sample",
-    "time": "test"
+    "name": "josh",
+    "age": "25"
 }
 
 ###
@@ -24,7 +24,7 @@ DELETE http://127.0.0.1:8080/customers HTTP/1.1
 
 ###
 
-GET http://127.0.0.1:8080/customers/10 HTTP/1.1
+GET http://127.0.0.1:8080/customers/3 HTTP/1.1
 
 ###
 

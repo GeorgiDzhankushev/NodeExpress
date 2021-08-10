@@ -1,6 +1,8 @@
 'use strict'
 
+const mysql = require('mysql');
 const express = require('express');
+const credentials = require('./credentials.json');
 const mid = require('./middleware.js');
 const app = express();
 const PORT = 8080;
@@ -19,5 +21,8 @@ app.route('/customers/:id')
 	.delete(mid.deleteCustomer) // delete specific customer
 	.all(mid.methodUnsupported);
 app.use(mid.notFound);
+app.use(mid.handleError);
 
+global.sql = mysql.createConnection(credentials);
+sql.connect();
 app.listen(PORT);
