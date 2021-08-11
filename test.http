@@ -20,7 +20,7 @@ content-type: application/json
 
 ###
 
-DELETE http://127.0.0.1:8080/customers HTTP/1.1
+DELETE http://127.0.0.1:8080/customers/6 HTTP/1.1
 
 ###
 
@@ -28,17 +28,17 @@ GET http://127.0.0.1:8080/customers/3 HTTP/1.1
 
 ###
 
-PUT http://127.0.0.1:8080/customers/10 HTTP/1.1
+PUT http://127.0.0.1:8080/customers/3 HTTP/1.1
 content-type: application/json
 
 {
     "name": "sample",
-    "time": "test"
+    "age": 16
 }
 
 ###
 
-DELETE http://127.0.0.1:8080/customers/10 HTTP/1.1
+DELETE http://127.0.0.1:8080/customers/3 HTTP/1.1
 
 ###
 
